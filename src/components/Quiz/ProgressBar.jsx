@@ -4,56 +4,8 @@ import { ArrowLeft } from './icons/ArrowLeft';
 import { DiamondIcon } from './icons/DiamondIcon';
 
 const ProgressBar = ({ onBack, progressInfo }) => {
-    // const { currentSection, totalSections, sectionProgress, overallProgress, sectionInfo } = progressInfo;
     const { currentStep, totalSteps, overallProgress, sectionTitle, totalSections } = progressInfo;
-    // const percentage = ((currentStep + 1) / totalSteps) * 100;
 
-    // Generate diamond markers based on totalSteps
-    // const renderDiamonds = () => {
-    //     const diamonds = [];
-
-    //     for (let i = 0; i < totalSections; i++) {
-    //         const isCompleted = i < currentSection;
-    //         const isCurrent = i === currentSection;
-    //         const progressWidth = isCurrent ? sectionProgress : (isCompleted ? 1 : 0); 
-    //         // giải thích: progressWidth là chiều rộng của phần tử hiện tại trong thanh tiến trình, được tính dựa trên trạng thái hoàn thành hoặc hiện tại của phần tử.
-
-    //         diamonds.push(
-    //             <div key={i} className="relative flex items-center justify-center">
-    //                 <span
-    //                     aria-hidden="true"
-    //                     className={`flex justify-center aspect-square transition-all duration-500 relative z-10 ${isCompleted ? 'text-primary scale-110' :
-    //                             isCurrent ? 'text-primary' :
-    //                                 'text-neutral opacity-50'
-    //                         }`}
-    //                     style={{
-    //                         width: 'var(--space-s)',
-    //                         height: 'var(--space-s)',
-    //                         padding: 'calc(var(--space-s) / 6)',
-    //                         backgroundColor: 'inherit',
-    //                         color: 'inherit'
-    //                     }}
-    //                 >
-    //                     <DiamondIcon />
-    //                 </span>
-
-    //                 {isCurrent && (
-    //                     <div
-    //                         className="absolute inset-0 rounded-full"
-    //                         style={{
-    //                             background: `conic-gradient(from 0deg, rgb(var(--color-background-primary)) ${progressWidth * 360}deg, transparent ${progressWidth * 360}deg)`,
-    //                             width: 'calc(var(--space-s) + 4px)',
-    //                             height: 'calc(var(--space-s) + 4px)',
-    //                             transition: 'all 0.3s ease-in-out'
-    //                         }}
-    //                     />
-    //                 )}
-    //             </div>
-    //         );
-    //     }
-    //     return diamonds;
-    // };
-    // Calculate diamond positions and states
     const totalDiamonds = totalSections; // 4 diamonds for 3 sections
     
     const renderDiamonds = () => {

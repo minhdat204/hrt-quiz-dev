@@ -1,12 +1,12 @@
 // src/components/Quiz/index.js
 import React, { useState, useEffect, useMemo } from 'react';
-import { quizData } from '../../data/hrt-women-quiz.js';
+import { quizData } from './data/hrt-women-quiz.js';
 // import { quizHelpers } from '../../data/quizHelpers.js';
 import ProgressBar from './ProgressBar.jsx';
 import Question from './Question.jsx';
 import QuizResult from './QuizResult.jsx'; // Sẽ tạo ở bước cuối
 import { AnimatePresence } from 'framer-motion';
-import { getQuestionData, getTotalQuestions, getProgressInfo } from '../../data/quizHelpers.js';
+import { getQuestionData, getTotalQuestions, getProgressInfo } from './data/quizHelpers.js';
 
 const LOCAL_STORAGE_KEY = 'hrt_quiz_progress';
 
