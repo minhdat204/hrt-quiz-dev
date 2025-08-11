@@ -3615,3 +3615,36 @@ option {
 .\[\&_strong\]\:text-neutral strong {
     color: var(--color-foreground-neutral)
 }
+
+/* Hiệu ứng dưới nút NEXT */
+.animate-glowing-border {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: -100%;
+    width: 100%;
+    height: 7px;
+    background: linear-gradient(90deg, transparent 0, var(--loader-color, currentColor) 30%, var(--loader-color, currentColor) 70%, transparent 100%);
+    animation: slide-bottom 1.3s linear infinite;
+    z-index: -1;
+  }
+
+  /* Hiệu ứng hover - tạm dừng animation */
+  &:hover::before {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}

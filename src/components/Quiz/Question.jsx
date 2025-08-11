@@ -67,10 +67,12 @@ const Question = ({ data, onAnswer, currentAnswer, onNext, direction }) => {
             <button
                 onClick={onNext}
                 disabled={!isAnswered}
-                className="button-root rounded-full capitalize gap-s bg-primary sm:hover:bg-primary-highlighted text-onprimary w-auto text-left px-l py-[calc(1em*0.9)] min-w-[250px] self-end"
+                className="animate-glowing-border button-root rounded-full capitalize gap-s bg-primary sm:hover:bg-primary-highlighted text-onprimary w-auto text-left px-l py-[calc(1em*0.9)] min-w-[250px] self-end"
             >
                 Next
+               
             </button>
+            
         </motion.div>
     );
 };

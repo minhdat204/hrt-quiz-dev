@@ -86,8 +86,8 @@ export const quizData = {
         }
     ],
     finalPage: {
-        headline: "Based on your answers, you may be experiencing symptoms of hormonal imbalance.",
+        headline: "Based on your answers, you may be experiencing\n symptoms of hormonal imbalance.",
         message: "Our specialists can help you uncover the root cause and build a plan that works for your body.",
-        ctaButton: "Book My Consultation"
+        ctaButton: "BOOK MY CONSULTATION"
     }
 };
