@@ -54,7 +54,7 @@ const ProgressBar = ({ onBack, progressInfo }) => {
     //     return diamonds;
     // };
     // Calculate diamond positions and states
-    const totalDiamonds = totalSections + 1; // 4 diamonds for 3 sections
+    const totalDiamonds = totalSections; // 4 diamonds for 3 sections
     
     const renderDiamonds = () => {
         const diamonds = [];

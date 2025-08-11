@@ -23,7 +23,7 @@ export const getProgressInfo = (currentStep) => {
 
     const { sectionIndex, questionIndexInSection } = currentQuestion;
     const totalSections = quizData.sections.length;
-    const totalDiamonds = totalSections + 1;
+    const totalDiamonds = totalSections;
 
     // Width mặc định của 1 section (25% cho 4 diamonds)
     const sectionWidth = 1 / totalDiamonds; // 0.25 = 25% 
@@ -35,7 +35,7 @@ export const getProgressInfo = (currentStep) => {
         sectionWidth / questionCount
     );
 
-    let baseProgress = sectionWidth; // Bắt đầu từ 25%
+    let baseProgress = 0; // Bắt đầu từ 25%
 
     // Cộng dồn width của các section đã hoàn thành
     for (let i = 0; i < sectionIndex; i++) {
